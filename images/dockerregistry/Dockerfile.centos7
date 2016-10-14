@@ -6,7 +6,7 @@
 #
 FROM openshift/origin-base
 
-RUN INSTALL_PKGS="tree findutils origin-dockerregistry" && \
+RUN INSTALL_PKGS="tree findutils origin-dockerregistry-1.2.1" && \
     yum install -y $INSTALL_PKGS && \
     rpm -V $INSTALL_PKGS && \
     yum clean all
